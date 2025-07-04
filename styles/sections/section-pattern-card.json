@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
+  "slug": "pattern-card",
+  "title": "TO Card Pattern",
+  "description": "Base card style for Tour, Destination, Accommodation, Review and Special cards.",
+  "blockTypes": [
+    "core/group"
+  ],
+  "styles": {
+    "color": {
+      "background": "var:preset|color|base",
+      "text": "var:preset|color|contrast"
+    },
+    "border": {
+      "radius": "0.5rem",
+      "width": "1px",
+      "color": "color-mix(in srgb, currentColor 15%, transparent)"
+    },
+    "spacing": {
+      "padding": {
+        "top": "var:preset|spacing|20",
+        "bottom": "var:preset|spacing|20",
+        "left": "var:preset|spacing|20",
+        "right": "var:preset|spacing|20"
+      }
+    },
+    "blocks": {
+      "core/post-title": {
+        "typography": {
+          "fontWeight": "700"
+        },
+        "border": {
+          "style": "solid",
+          "width": "0 0 2px 0",
+          "color": "var:preset|color|primary"
+        },
+        "spacing": {
+          "margin": {
+            "bottom": "var:preset|spacing|10"
+          }
+        }
+      },
+      "core/button": {
+        "typography": {
+          "fontSize": "var:preset|font-size|small"
+        },
+        "spacing": {
+          "margin": {
+            "top": "var:preset|spacing|20"
+          }
+        }
+      }
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "var:preset|color|primary",
+          "text": "var:preset|color|base"
+        },
+        ":hover": {
+          "color": {
+            "background": "color-mix(in srgb, var(--wp--preset--color--primary) 85%, transparent)",
+            "text": "var:preset|color|base"
+          }
+        }
+      }
+    },
+    "shadow": {
+      "boxShadow": "0 2px 8px rgba(0,0,0,.04)"
+    }
+  }
+}

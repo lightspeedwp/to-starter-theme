@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
+  "slug": "section-units",
+  "title": "Accommodation Units Section",
+  "blockTypes": [
+    "core/group",
+    "core/columns",
+    "core/column"
+  ],
+  "styles": {
+    "color": {
+      "background": "var:preset|color|base",
+      "text": "var:preset|color|contrast"
+    },
+    "spacing": {
+      "padding": {
+        "top": "var:preset|spacing|40",
+        "bottom": "var:preset|spacing|40"
+      }
+    },
+    "blocks": {
+      "core/separator": {
+        "color": {
+          "text": "color-mix(in srgb, currentColor 25%, transparent)"
+        }
+      }
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "var:preset|color|contrast",
+          "text": "var:preset|color|base"
+        },
+        ":hover": {
+          "color": {
+            "background": "color-mix(in srgb, var(--wp--preset--color--contrast) 80%, transparent)",
+            "text": "var:preset|color|base"
+          }
+        }
+      }
+    }
+  }
+}

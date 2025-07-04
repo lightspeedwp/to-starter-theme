@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
+  "slug": "section-query-loop",
+  "title": "Listings & Cards Section",
+  "blockTypes": [
+    "core/group",
+    "core/columns",
+    "core/column"
+  ],
+  "styles": {
+    "color": {
+      "background": "var:preset|color|accent-3",
+      "text": "var:preset|color|accent-2"
+    },
+    "spacing": {
+      "padding": {
+        "top": "var:preset|spacing|40",
+        "bottom": "var:preset|spacing|40"
+      }
+    },
+    "blocks": {
+      "core/separator": {
+        "color": {
+          "text": "color-mix(in srgb, currentColor 25%, transparent)"
+        }
+      }
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "var:preset|color|accent-2",
+          "text": "var:preset|color|accent-3"
+        },
+        ":hover": {
+          "color": {
+            "background": "color-mix(in srgb, var(--wp--preset--color--accent-2) 85%, transparent)",
+            "text": "var:preset|color|accent-3"
+          }
+        }
+      }
+    }
+  }
+}
