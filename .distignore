@@ -1,40 +1,56 @@
-# Build and development files
-node_modules
-vendor
-tests
-resources
-.github
-.git
-.gitignore
+# Development directories
+/.git
+/.github
+/.vscode
+/.idea
+/.devcontainer
+/tests
+/test-results
+/playwright-report
+/coverage
+/node_modules
+/vendor
+/resources
+
+# Development files
+.distignore
 .gitattributes
+.gitignore
 .editorconfig
 .eslintrc.json
 .prettierrc.js
-*.config.js
-package*.json
+.stylelintrc.json
+stylelint.config.js
+webpack.config.js
+playwright.config.js
 composer.json
 composer.lock
-phpcs.xml
+package.json
+package-lock.json
+
+# Testing and CI files
 phpunit.xml
+phpunit.xml.dist
+phpcs.xml
+phpcs.xml.dist
+
+# Documentation
+README.md
+changelog.md
+*.md
 
 # Development tools
-.vscode
-.idea
 *.swp
 *.swo
 *~
 
 # Logs and temporary files
 *.log
-.tmp
-.cache
+.tmp/
+.cache/
 .DS_Store
 Thumbs.db
 
-# Testing
-/tmp/
-/test-results/
-/playwright-report/
-
-# Source maps and development assets (keep built assets)
+# Source maps and development assets
 public/**/*.map
+*.map

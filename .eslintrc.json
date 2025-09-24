@@ -35,10 +35,16 @@
 		"@wordpress/no-global-active-element": "off"
 	},
 	"ignorePatterns": [
-		"public/**",
-		"node_modules/**",
-		"vendor/**",
-		"tests/**",
-		"*.min.js"
+		"public/",
+		"assets/dist/",
+		"vendor/",
+		"node_modules/",
+		"tests/",
+		"test-results/",
+		"playwright-report/",
+		"coverage/",
+		"resources/",
+		"*.min.js",
+		"*.asset.php"
 	]
 }

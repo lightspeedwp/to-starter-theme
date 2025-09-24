@@ -37,19 +37,19 @@
   },
   "homepage": "https://github.com/lightspeeddevelopment/to-starter-theme#readme",
   "devDependencies": {
-    "@wordpress/scripts": "^30.24.0",
-    "@wordpress/eslint-plugin": "^22.17.0",
-    "@wordpress/stylelint-config": "^23.23.0",
-    "@playwright/test": "^1.49.0",
+    "@playwright/test": "^1.40.0",
+    "@wordpress/eslint-plugin": "^19.0.0",
+    "@wordpress/scripts": "30.24.0",
+    "@wordpress/stylelint-config": "^21.0.0",
     "path": "^0.12.7",
-    "webpack-remove-empty-scripts": "^1.1.1"
+    "webpack-remove-empty-scripts": "^1.0.0"
   },
   "dependencies": {
-    "@wordpress/block-editor": "^15.4.0",
-    "@wordpress/blocks": "^15.4.0",
-    "@wordpress/components": "^30.24.0",
-    "@wordpress/element": "^7.31.0",
-    "@wordpress/i18n": "^5.31.0"
+    "@wordpress/block-editor": "^12.0.0",
+    "@wordpress/blocks": "^12.0.0",
+    "@wordpress/components": "^25.0.0",
+    "@wordpress/element": "^5.0.0",
+    "@wordpress/i18n": "^4.0.0"
   },
   "engines": {
     "node": ">=18.0.0",
