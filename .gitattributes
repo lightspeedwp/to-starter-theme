@@ -1,0 +1,66 @@
+# Git attributes for TO Starter Theme
+
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Source code
+*.php text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.jsx text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.sass text eol=lf
+*.less text eol=lf
+
+# Data/config files
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.xml text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+
+# WordPress specific
+*.pot text eol=lf
+*.po text eol=lf
+
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text eol=lf
+
+# Fonts
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+
+# Archives
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary
+
+# Executable files
+*.exe binary
+
+# Exclude from exports
+/.github export-ignore
+/tests export-ignore
+/resources export-ignore
+/node_modules export-ignore
+/vendor export-ignore
+/.* export-ignore
+/phpcs.xml export-ignore
+/phpunit.xml export-ignore
+/playwright.config.js export-ignore
+/webpack.config.js export-ignore
+/package*.json export-ignore
+/composer.json export-ignore
+/composer.lock export-ignore

@@ -1,0 +1,116 @@
+/*!
+ * TO Starter Theme - Block Styles
+ * Custom styles for WordPress blocks
+ *
+ * @package TO_Starter_Theme
+ */
+
+// Custom block styles
+.wp-block {
+	// Cover block enhancements
+	&-cover {
+		&.is-style-tour-hero {
+			min-height: 60vh;
+
+			.wp-block-cover__inner-container {
+				padding: var(--to-theme-spacing-xl);
+				text-align: center;
+
+				h1 {
+					font-size: clamp(2rem, 5vw, 4rem);
+					text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+				}
+
+				p {
+					font-size: 1.25rem;
+					text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+	}
+
+	// Gallery block enhancements
+	&-gallery {
+		&.is-style-tour-gallery {
+			.wp-block-image {
+				border-radius: 8px;
+				overflow: hidden;
+
+				img {
+					transition: transform 0.3s ease;
+				}
+
+				&:hover img {
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
+
+	// Group block variations
+	&-group {
+		&.is-style-card {
+			background: var(--to-theme-surface);
+			border-radius: 8px;
+			padding: var(--to-theme-spacing-lg);
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		&.is-style-highlight {
+			background: linear-gradient(135deg, var(--to-theme-primary), var(--to-theme-secondary));
+			color: white;
+			padding: var(--to-theme-spacing-lg);
+			border-radius: 8px;
+
+			h1, h2, h3, h4, h5, h6 {
+				color: white;
+			}
+
+			a {
+				color: white;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	// Columns block responsive enhancements
+	&-columns {
+		&.is-style-tour-features {
+			.wp-block-column {
+				text-align: center;
+				padding: var(--to-theme-spacing-md);
+
+				.wp-block-image {
+					margin-bottom: var(--to-theme-spacing-md);
+
+					img {
+						border-radius: 50%;
+						width: 80px;
+						height: 80px;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+
+	// Quote block styling
+	&-quote {
+		&.is-style-tour-testimonial {
+			background: var(--to-theme-surface);
+			border-left: 4px solid var(--to-theme-accent);
+			padding: var(--to-theme-spacing-lg);
+			border-radius: 0 8px 8px 0;
+
+			cite {
+				font-style: normal;
+				font-weight: 600;
+				color: var(--to-theme-primary);
+
+				&:before {
+					content: "— ";
+				}
+			}
+		}
+	}
+}

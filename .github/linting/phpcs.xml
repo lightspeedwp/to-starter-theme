@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<ruleset name="TO Starter Theme - WordPress Coding Standards"
+         namespace="WordPressCS\WordPress">
+    <description>WordPress Coding Standards for TO Starter Theme</description>
+
+    <!-- Pass some flags to PHPCS:
+         p flag: Show progress of the run.
+         s flag: Show sniff codes in all reports.
+    -->
+    <arg value="ps"/>
+
+    <!-- Check up to 8 files simultaneously. -->
+    <arg name="parallel" value="8"/>
+
+    <!-- Check all files in this directory and the directories below it. -->
+    <file>.</file>
+
+    <!-- Exclude directories and files. -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/public/*</exclude-pattern>
+    <exclude-pattern>*/tests/*</exclude-pattern>
+    <exclude-pattern>*/resources/*</exclude-pattern>
+    <exclude-pattern>*.min.js</exclude-pattern>
+    <exclude-pattern>*.min.css</exclude-pattern>
+    <exclude-pattern>*.asset.php</exclude-pattern>
+
+    <!-- Set minimum supported WordPress version -->
+    <config name="minimum_supported_wp_version" value="6.0" />
+
+    <!-- Set minimum supported PHP version -->
+    <config name="testVersion" value="8.0-" />
+
+    <!-- Use WordPress coding standards -->
+    <rule ref="WordPress-Core"/>
+    <rule ref="WordPress-Extra"/>
+    <rule ref="WordPress-Docs"/>
+
+    <!-- Theme-specific rules -->
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array" value="to-starter-theme"/>
+        </properties>
+    </rule>
+
+    <!-- Security rules -->
+    <rule ref="WordPress.Security.EscapeOutput"/>
+    <rule ref="WordPress.Security.ValidatedSanitizedInput"/>
+    <rule ref="WordPress.Security.NonceVerification"/>
+
+    <!-- PHP Compatibility -->
+    <rule ref="PHPCompatibilityWP"/>
+
+    <!-- Theme file name flexibility -->
+    <rule ref="WordPress.Files.FileName.InvalidClassFileName">
+        <exclude-pattern>*/patterns/*</exclude-pattern>
+        <exclude-pattern>*/parts/*</exclude-pattern>
+        <exclude-pattern>*/templates/*</exclude-pattern>
+    </rule>
+
+    <!-- Allow short array syntax -->
+    <rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Relax some theme-specific rules -->
+    <rule ref="WordPress.WP.EnqueuedResourceParameters.MissingVersion">
+        <severity>5</severity>
+    </rule>
+
+    <rule ref="WordPress.WP.EnqueuedResourceParameters.NoExplicitVersion">
+        <severity>5</severity>
+    </rule>
+</ruleset>

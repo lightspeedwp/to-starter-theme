@@ -1,0 +1,26 @@
+/*!
+ * TO Starter Theme - Admin Styles
+ * Styles for WordPress admin interface customizations
+ *
+ * @package TO_Starter_Theme
+ */
+
+// Admin-specific styles
+.to-theme-admin {
+	// Customizer styles
+	&-customizer {
+		.control-section {
+			border: 1px solid #ddd;
+			margin-bottom: 1rem;
+		}
+	}
+
+	// Theme options styles
+	&-options {
+		.form-table {
+			th {
+				width: 200px;
+			}
+		}
+	}
+}

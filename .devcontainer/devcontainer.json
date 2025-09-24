@@ -1,0 +1,49 @@
+{
+	"name": "TO Starter Theme Development",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "workspace",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
+	"forwardPorts": [3000, 8080, 8888, 8025],
+	"postCreateCommand": "npm install && composer install && npx playwright install",
+	"postStartCommand": "echo 'WordPress Development Environment Ready!'",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash",
+				"php.executablePath": "/usr/local/bin/php",
+				"php.validate.executablePath": "/usr/local/bin/php",
+				"intelephense.environment.phpVersion": "8.2.0",
+				"eslint.workingDirectories": ["./"],
+				"stylelint.configFile": "./stylelint.config.js",
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.fixAll.eslint": "explicit",
+					"source.fixAll.stylelint": "explicit"
+				},
+				"github.copilot.enable": {
+					"*": true,
+					"php": true,
+					"javascript": true,
+					"css": true,
+					"scss": true,
+					"json": true,
+					"markdown": true
+				}
+			},
+			"extensions": [
+				"ms-vscode.vscode-typescript-next",
+				"ms-vscode.vscode-eslint",
+				"stylelint.vscode-stylelint",
+				"esbenp.prettier-vscode",
+				"ms-playwright.playwright",
+				"github.copilot",
+				"github.copilot-chat",
+				"bmewburn.vscode-intelephense-client",
+				"claudiosanches.wpcs",
+				"wordpresstoolbox.wordpress-toolbox",
+				"ms-vscode.vscode-php-debug"
+			]
+		}
+	}
+}

@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+vendor/
+.composer/
+
+# Build outputs
+public/
+build/
+dist/
+
+# Development files
+.vscode/
+.git/
+.github/
+*.log
+*.tmp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*~
+
+# Test files
+coverage/
+*.lcov
+playwright-report/
+test-results/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache directories
+.cache/
+.npm/
+.phpunit.cache/
+
+# Temporary files
+*.tmp
+*.temp
+.phpcs-cache

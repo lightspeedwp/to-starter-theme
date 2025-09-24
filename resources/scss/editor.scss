@@ -1,0 +1,52 @@
+/*!
+ * TO Starter Theme - Editor Styles
+ * Styles for the block editor to match front-end appearance
+ *
+ * @package TO_Starter_Theme
+ */
+
+// Import theme variables
+@use "../theme" as theme;
+
+// Editor-specific styles
+.editor-styles-wrapper {
+	font-family: var(--to-theme-font-family-base);
+	font-size: var(--to-theme-font-size-base);
+	line-height: var(--to-theme-line-height-base);
+	color: var(--to-theme-text);
+
+	// Typography in editor
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--to-theme-font-family-heading);
+		font-weight: 600;
+		line-height: 1.2;
+	}
+
+	// Links in editor
+	a {
+		color: var(--to-theme-primary);
+	}
+
+	// Buttons in editor
+	.wp-block-button__link {
+		background-color: var(--to-theme-primary);
+		border: none;
+		border-radius: 4px;
+		padding: var(--to-theme-spacing-xs) var(--to-theme-spacing-md);
+		color: white;
+		font-weight: 500;
+	}
+
+	// Block editor specific adjustments
+	.wp-block {
+		max-width: var(--to-theme-content-width);
+
+		&[data-align="wide"] {
+			max-width: var(--to-theme-wide-width);
+		}
+
+		&[data-align="full"] {
+			max-width: none;
+		}
+	}
+}

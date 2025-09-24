@@ -1,0 +1,58 @@
+{
+  "name": "to-starter-theme",
+  "version": "1.0.0",
+  "description": "Modern WordPress block theme with tour operator functionality",
+  "scripts": {
+    "start": "wp-scripts start --webpack-src-dir=resources --output-path=public",
+    "build": "wp-scripts build --webpack-src-dir=resources --output-path=public",
+    "build:pot": "wp i18n make-pot . languages/to-starter-theme.pot --exclude=node_modules,vendor,public",
+    "build:mo": "wp i18n make-mo languages",
+    "lint:js": "wp-scripts lint-js",
+    "lint:css": "wp-scripts lint-style",
+    "lint:php": "composer phpcs",
+    "lint:php:fix": "composer phpcbf",
+    "lint:all": "npm run lint:php && npm run lint:js && npm run lint:css",
+    "format": "npm run lint:php:fix && wp-scripts format",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js",
+    "packages-update": "wp-scripts packages-update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightspeeddevelopment/to-starter-theme.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "block-theme",
+    "tour-operator",
+    "travel",
+    "accommodation",
+    "tours"
+  ],
+  "author": "LightSpeed Development",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/lightspeeddevelopment/to-starter-theme/issues"
+  },
+  "homepage": "https://github.com/lightspeeddevelopment/to-starter-theme#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^30.24.0",
+    "@wordpress/eslint-plugin": "^22.17.0",
+    "@wordpress/stylelint-config": "^23.23.0",
+    "@playwright/test": "^1.49.0",
+    "path": "^0.12.7",
+    "webpack-remove-empty-scripts": "^1.1.1"
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "^15.4.0",
+    "@wordpress/blocks": "^15.4.0",
+    "@wordpress/components": "^30.24.0",
+    "@wordpress/element": "^7.31.0",
+    "@wordpress/i18n": "^5.31.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

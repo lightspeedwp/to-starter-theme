@@ -1,0 +1,52 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  schedule:
+    - cron: '0 6 * * 1' # Weekly on Monday
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run npm audit
+        run: |
+          if [ -f "package.json" ]; then
+            npm audit --audit-level=moderate
+          fi
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Install Composer dependencies
+        run: |
+          if [ -f "composer.json" ]; then
+            composer install --no-interaction --no-progress
+          fi
+
+      - name: Security scan with Psalm
+        run: |
+          if [ -f "composer.json" ]; then
+            composer require --dev vimeo/psalm
+            vendor/bin/psalm --init
+            vendor/bin/psalm --no-cache --report=./psalm-report.xml || true
+          fi
+
+      - name: Upload security reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: security-reports
+          path: |
+            psalm-report.xml
+            npm-audit.json
+          retention-days: 30

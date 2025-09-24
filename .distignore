@@ -1,0 +1,40 @@
+# Build and development files
+node_modules
+vendor
+tests
+resources
+.github
+.git
+.gitignore
+.gitattributes
+.editorconfig
+.eslintrc.json
+.prettierrc.js
+*.config.js
+package*.json
+composer.json
+composer.lock
+phpcs.xml
+phpunit.xml
+
+# Development tools
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Logs and temporary files
+*.log
+.tmp
+.cache
+.DS_Store
+Thumbs.db
+
+# Testing
+/tmp/
+/test-results/
+/playwright-report/
+
+# Source maps and development assets (keep built assets)
+public/**/*.map
